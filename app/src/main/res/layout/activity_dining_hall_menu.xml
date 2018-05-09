@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <EditText
+        android:id="@+id/people"
+        android:layout_width="150dp"
+        android:layout_height="89dp"
+        android:layout_alignBottom="@+id/wait"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:foregroundGravity="top|left|center_horizontal"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:text="People: 70/200"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <EditText
+        android:id="@+id/wait"
+        android:layout_width="150dp"
+        android:layout_height="93dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:background="@color/colorPrimary"
+        android:ems="10"
+        android:foregroundGravity="top|right"
+        android:inputType="textPersonName"
+        android:text="Wait Time: 30 mins"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="-2dp" />
+</RelativeLayout>
