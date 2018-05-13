@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -70,6 +71,15 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dartmouthCampus));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dartmouthCampus, 16.0f));
+
+
+        findViewById(R.id.preferences).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent settingsIntent = new Intent(CampusMapActivity.this, SettingsActivity.class);
+                startActivity(settingsIntent);
+            }
+        });
     }
 
 
