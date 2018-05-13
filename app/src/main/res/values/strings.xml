@@ -7,10 +7,19 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_settings">Settings</string>
 
+    <string name="pref_title_display_plan">Meal Plan</string>
+    <string name="pref_default_plan">The 5</string>
+
+    <string name="pref_title_display_swipes">Swipes</string>
+    <string name="pref_default_swipes">4</string>
+
+    <string name="pref_title_display_dba">DBA</string>
+    <string name="pref_default_dba">$245</string>
+
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
+    <string name="pref_header_general">Account Info</string>
 
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact
@@ -20,13 +29,17 @@
     <string name="pref_title_display_name">Display name</string>
     <string name="pref_default_display_name">John Smith</string>
 
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
+
+    <!-- Example settings for Dietary Restrictions -->
+    <string name="pref_header_diet">Dietary Restrictions</string>
+
+    <string name="pref_title_add_dietary_restrictions">Add dietary restriction</string>
+    <string-array name="pref_dietary_restrictions_titles">
+        <item>Vegan</item>
+        <item>Vegetarian</item>
+        <item>Gluten Free</item>
     </string-array>
-    <string-array name="pref_example_list_values">
+    <string-array name="pref_dietary_restrictions_values">
         <item>1</item>
         <item>0</item>
         <item>-1</item>
