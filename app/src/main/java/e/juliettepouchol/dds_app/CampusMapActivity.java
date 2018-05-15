@@ -63,7 +63,6 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
         mMap.addMarker(new MarkerOptions().position(Hop).title("Hop")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
         mMap.addMarker(new MarkerOptions().position(Kaf).title("Kaf"));
-        mMap.addMarker(new MarkerOptions().position(FOCO).title("FOCO"));
         mMap.addMarker(new MarkerOptions().position(Novack).title("Novack")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
@@ -85,7 +84,7 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-        Toast.makeText(this, marker.getTitle().toString(), Toast.LENGTH_SHORT).show();
+        
         marker.showInfoWindow();
         Intent markerIntent = new Intent(CampusMapActivity.this, DiningHallMenu.class);
         markerIntent.putExtra("EXTRA_DH", marker.getTitle().toString());
