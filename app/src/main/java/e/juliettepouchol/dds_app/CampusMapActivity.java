@@ -84,7 +84,7 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-        
+
         marker.showInfoWindow();
         Intent markerIntent = new Intent(CampusMapActivity.this, DiningHallMenu.class);
         markerIntent.putExtra("EXTRA_DH", marker.getTitle().toString());
