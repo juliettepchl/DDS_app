@@ -1,22 +1,21 @@
 package e.juliettepouchol.dds_app;
 
 import android.app.ListActivity;
-import android.database.Cursor;
-import android.provider.Contacts;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.ListAdapter;
-import android.widget.SimpleCursorAdapter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.app.ListActivity;
+import android.widget.Toast;
 
 public class MenuActivity extends ListActivity {
 
@@ -34,44 +33,63 @@ public class MenuActivity extends ListActivity {
 
 
         if(dining_hall.equals("Collis")) {
-            String [] menu = getResources().getStringArray(R.array.collis_menu);
-            // initiate the listadapter
-            ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, menu);
+            String [] list = getResources().getStringArray(R.array.collis_menu);
+            set_up_list(list);
 
-            // assign the list adapter
-            setListAdapter(myAdapter);
         }
         else if(dining_hall.equals("Hop")) {
-            String [] menu = getResources().getStringArray(R.array.hop_menu);
-            // initiate the listadapter
-            ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, menu);
-
-            // assign the list adapter
-            setListAdapter(myAdapter);
+            String [] list = getResources().getStringArray(R.array.hop_menu);
+            set_up_list(list);
         }
         if(dining_hall.equals("Kaf")) {
-            String [] menu = getResources().getStringArray(R.array.kaf_menu);
-            // initiate the listadapter
-            ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, menu);
-
-            // assign the list adapter
-            setListAdapter(myAdapter);
+            String [] list = getResources().getStringArray(R.array.kaf_menu);
+            set_up_list(list);
         }
         if(dining_hall.equals("Novack")) {
-            String [] menu = getResources().getStringArray(R.array.novack_menu);
-            // initiate the listadapter
-            ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, menu);
+            String [] list = getResources().getStringArray(R.array.novack_menu);
+            set_up_list(list);
+        }
+    }
 
-            // assign the list adapter
+    public void set_up_list(String[] list){
+        ArrayList<String> menu = new ArrayList();
+        Map<String, ArrayList<String>> item_restriction = new HashMap<String, ArrayList<String>>();
+        for(String item : list){
+            ArrayList<String> restrictions = new ArrayList<String>();
+            String[] items = item.split("\\|");
+            for(String restriction :items[1].split(",")){
+                restrictions.add(restriction);
+            }
+            item_restriction.put(items[0], restrictions);
+            menu.add(items[0]);
+        }
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String restriction = prefs.getString("diet_list", "default");
+        // initiate the listadapter
+
+        if(restriction.equals("none")){
+            ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, menu);
+            setListAdapter(myAdapter);
+        }
+
+        else {
+            ArrayList<String> filtered_menu = new ArrayList<String>();
+            for(String item : menu){
+                if(item_restriction.get(item).contains(restriction)){
+                    filtered_menu.add(item);
+                }
+            }
+
+            ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, filtered_menu);
             setListAdapter(myAdapter);
         }
 
 
-
+        // assign the list adapter
 
 
     }
-
     // when an item of the list is clicked
     @Override
     protected void onListItemClick(ListView list, View view, int position, long id) {

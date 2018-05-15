@@ -35,14 +35,21 @@
 
     <string name="pref_title_add_dietary_restrictions">Add dietary restriction</string>
     <string-array name="pref_dietary_restrictions_titles">
-        <item>Vegan</item>
-        <item>Vegetarian</item>
-        <item>Gluten Free</item>
+        <item>none</item>
+        <item>vegan</item>
+        <item>vegetarian</item>
+        <item>gluten free</item>
+        <item>dairy free</item>
+        <item>nut free</item>
     </string-array>
     <string-array name="pref_dietary_restrictions_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
+        <item>none</item>
+        <item>vegan</item>
+        <item>vegetarian</item>
+        <item>gluten free</item>
+        <item>dairy free</item>
+        <item>nut free</item>
+
     </string-array>
 
     <!-- Example settings for Data & Sync -->
@@ -93,55 +100,56 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_menu">Menu</string>
     <string-array name="collis_menu">
-        <item>Stir Fry</item>
-        <item>Pesto Pasta</item>
-        <item>Rainbow Pasta</item>
-        <item>Salmon Sushi</item>
-        <item>Tomato Mozzarella Salad</item>
-        <item>Chocolate Chip Cookie</item>
-        <item>Ham and Cheese Omelet</item>
-        <item>Clam Chowder Soup</item>
-        <item>Tomato Soup</item>
-        <item>Chicken Noodle Soup</item>
-        <item>Broccoli Cheddar Soup</item>
-        <item>Strawberry Smoothie</item>
-        <item>Banana Smoothie</item>
-        <item>Blueberry Smoothie</item>
+        <item>Stir Fry|dairy free</item>
+        <item>Pesto Pasta|vegetarian,dairy free</item>
+        <item>Rainbow Pasta|vegetarian,dairy free</item>
+        <item>Salmon Sushi|dairy free</item>
+        <item>Tomato Mozzarella Salad|vegetarian,gluten free,nut free</item>
+        <item>Chocolate Chip Cookie|vegetarian,nut free</item>
+        <item>Ham and Cheese Omelet|nut free</item>
+        <item>Clam Chowder Soup|nut free</item>
+        <item>Tomato Soup|vegan,vegetarian,dairy free,nut free</item>
+        <item>Chicken Noodle Soup|dairy free,nut free</item>
+        <item>Broccoli Cheddar Soup|vegetarian,gluten free,nut free</item>
+        <item>Strawberry Smoothie|vegan,vegetarian,gluten free,nut free</item>
+        <item>Banana Smoothie|vegan,vegetarian,gluten free,nut free</item>
+        <item>Blueberry Smoothie|vegan,vegetarian,gluten free,nut free</item>
     </string-array>
 
     <string-array name="hop_menu">
-        <item>Chicken Tender Caso</item>
-        <item>Chicken Tender Bob</item>
-        <item>Billy Bob</item>
-        <item>The Hulk</item>
-        <item>Fries</item>
-        <item>Mozzarella Sticks</item>
-        <item>Soda</item>
-        <item>Onion Rings</item>
-        <item>BLT</item>
-        <item>Cesar Salad</item>
+        <item>Chicken Tender Caso|nut free</item>
+        <item>Chicken Tender Bob|nut free</item>
+        <item>Billy Bob|nut free</item>
+        <item>The Hulk|nut free</item>
+        <item>Fries|vegan,vegetarian,dairy free,nut free</item>
+        <item>Mozzarella Sticks|vegetarian,nut free</item>
+        <item>Soda|vegan,vegetarian,dairy free,gluten free,nut free</item>
+        <item>Onion Rings|vegan,vegetarian,dairy free,nut free</item>
+        <item>BLT|nut free</item>
+        <item>Cesar Salad|nut free</item>
     </string-array>
 
     <string-array name="novack_menu">
-        <item>Blueberry Muffin</item>
-        <item>Blueberry Scone</item>
-        <item>Double Chocolate Muffin</item>
-        <item>French Toast Muffin</item>
-        <item>Sausage Egg and Cheese</item>
-        <item>Apples and Bananas</item>
-        <item>Rasberry Yogurt</item>
-        <item>Odwalla</item>
+        <item>Blueberry Muffin|vegetarian</item>
+        <item>Blueberry Scone|vegetarian</item>
+        <item>Double Chocolate Muffin|vegetarian</item>
+        <item>Vegan Cornbread Muffin|vegan,vegetarian,dairy free</item>
+        <item>French Toast Muffin|vegetarian</item>
+        <item>Sausage Egg and Cheese|nut free</item>
+        <item>Apples and Bananas|vegan,vegetarian,dairy free,nut free</item>
+        <item>Rasberry Yogurt|vegetarian,nut free</item>
+        <item>Odwalla|vegetarian,nut free</item>
 
     </string-array>
     <string-array name="kaf_menu">
-        <item>Rainbow Ravioli</item>
-        <item>New England Salad</item>
-        <item>Cesar Salad</item>
-        <item>Iced Soy Latte</item>
-        <item>Chocolate Croissant</item>
-        <item>Ham and Cheese Croissant</item>
-        <item>Apple and Brie Sandwich</item>
-        <item>Chocolate Milk</item>
+        <item>Rainbow Ravioli|vegetarian,nut free</item>
+        <item>New England Salad|vegetarian</item>
+        <item>Cesar Salad|vegetarian,nut free</item>
+        <item>Iced Soy Latte|vegetarian,nut free,gluten free,vegan,dairy free</item>
+        <item>Chocolate Croissant|vegetarian,nut free</item>
+        <item>Ham and Cheese Croissant|nut free</item>
+        <item>Apple and Brie Sandwich|nut free,vegetarian</item>
+        <item>Chocolate Milk|vegetarian,nut free,gluten free</item>
 
 
 

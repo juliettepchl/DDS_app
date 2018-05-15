@@ -81,7 +81,6 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
         });
     }
 
-
     @Override
     public boolean onMarkerClick(Marker marker) {
 
