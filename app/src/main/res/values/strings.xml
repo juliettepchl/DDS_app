@@ -152,7 +152,6 @@
         <item>Chocolate Milk|vegetarian,nut free,gluten free</item>
 
 
-
     </string-array>
 
 
@@ -246,4 +245,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
 </resources>

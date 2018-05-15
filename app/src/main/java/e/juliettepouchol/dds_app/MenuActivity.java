@@ -1,6 +1,7 @@
 package e.juliettepouchol.dds_app;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -94,7 +95,8 @@ public class MenuActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView list, View view, int position, long id) {
         super.onListItemClick(list, view, position, id);
-
+        Intent intent = new Intent(this, ScrollingActivity.class);
+        startActivity(intent);
         String selectedItem = (String) getListView().getItemAtPosition(position);
         //String selectedItem = (String) getListAdapter().getItem(position);
 
