@@ -92,6 +92,62 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_menu">Menu</string>
+    <string-array name="collis_menu">
+        <item>Stir Fry</item>
+        <item>Pesto Pasta</item>
+        <item>Rainbow Pasta</item>
+        <item>Salmon Sushi</item>
+        <item>Tomato Mozzarella Salad</item>
+        <item>Chocolate Chip Cookie</item>
+        <item>Ham and Cheese Omelet</item>
+        <item>Clam Chowder Soup</item>
+        <item>Tomato Soup</item>
+        <item>Chicken Noodle Soup</item>
+        <item>Broccoli Cheddar Soup</item>
+        <item>Strawberry Smoothie</item>
+        <item>Banana Smoothie</item>
+        <item>Blueberry Smoothie</item>
+    </string-array>
+
+    <string-array name="hop_menu">
+        <item>Chicken Tender Caso</item>
+        <item>Chicken Tender Bob</item>
+        <item>Billy Bob</item>
+        <item>The Hulk</item>
+        <item>Fries</item>
+        <item>Mozzarella Sticks</item>
+        <item>Soda</item>
+        <item>Onion Rings</item>
+        <item>BLT</item>
+        <item>Cesar Salad</item>
+    </string-array>
+
+    <string-array name="novack_menu">
+        <item>Blueberry Muffin</item>
+        <item>Blueberry Scone</item>
+        <item>Double Chocolate Muffin</item>
+        <item>French Toast Muffin</item>
+        <item>Sausage Egg and Cheese</item>
+        <item>Apples and Bananas</item>
+        <item>Rasberry Yogurt</item>
+        <item>Odwalla</item>
+
+    </string-array>
+    <string-array name="kaf_menu">
+        <item>Rainbow Ravioli</item>
+        <item>New England Salad</item>
+        <item>Cesar Salad</item>
+        <item>Iced Soy Latte</item>
+        <item>Chocolate Croissant</item>
+        <item>Ham and Cheese Croissant</item>
+        <item>Apple and Brie Sandwich</item>
+        <item>Chocolate Milk</item>
+
+
+
+    </string-array>
+
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

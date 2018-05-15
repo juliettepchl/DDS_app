@@ -21,6 +21,7 @@
         android:singleLine="false"
         android:text="People: 70/200"
         android:textAlignment="center"
+        android:clickable="false"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="3dp" />
 
@@ -38,6 +39,7 @@
         android:foregroundGravity="top|right"
         android:inputType="textPersonName"
         android:text="Wait Time: 30 mins"
+        android:clickable="false"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         tools:layout_editor_absoluteX="188dp"
