@@ -42,4 +42,13 @@
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         tools:layout_editor_absoluteX="188dp"
         tools:layout_editor_absoluteY="-2dp" />
+
+    <Button
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/people"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:text="See Menu" />
 </RelativeLayout>

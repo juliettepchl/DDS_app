@@ -88,6 +88,7 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
         Toast.makeText(this, marker.getTitle().toString(), Toast.LENGTH_SHORT).show();
         marker.showInfoWindow();
         Intent markerIntent = new Intent(CampusMapActivity.this, DiningHallMenu.class);
+        markerIntent.putExtra("EXTRA_DH", marker.getTitle().toString());
         startActivity(markerIntent);
         return true;
     }

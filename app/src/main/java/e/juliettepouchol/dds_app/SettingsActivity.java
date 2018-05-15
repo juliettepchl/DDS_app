@@ -133,6 +133,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
+
     /**
      * {@inheritDoc}
      */
