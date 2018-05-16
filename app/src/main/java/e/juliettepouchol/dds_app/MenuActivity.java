@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -50,6 +52,17 @@ public class MenuActivity extends ListActivity {
             String [] list = getResources().getStringArray(R.array.novack_menu);
             set_up_list(list);
         }
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ScrollingActivity.class);
+                startActivity(intent);
+                //String selectedItem = (String) getListAdapter().getItem(position);
+            }
+        });
+
     }
 
     public void set_up_list(String[] list){
@@ -94,11 +107,7 @@ public class MenuActivity extends ListActivity {
     // when an item of the list is clicked
     @Override
     protected void onListItemClick(ListView list, View view, int position, long id) {
-        super.onListItemClick(list, view, position, id);
-        Intent intent = new Intent(this, ScrollingActivity.class);
-        startActivity(intent);
-        String selectedItem = (String) getListView().getItemAtPosition(position);
-        //String selectedItem = (String) getListAdapter().getItem(position);
+
 
     }
 
