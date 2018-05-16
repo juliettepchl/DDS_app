@@ -25,18 +25,28 @@ public class DiningHallMenu extends AppCompatActivity {
 
         final String dining_hall = getIntent().getStringExtra("EXTRA_DH");
         ImageView graph = findViewById(R.id.imageView);
+        EditText wait_view = (EditText)findViewById(R.id.wait);
+        EditText people_view = (EditText)findViewById(R.id.people);
 
         if(dining_hall.equals("Collis")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.collis_graph));
+            wait_view.setText(R.string.pref_collis_wait);
+            people_view.setText(R.string.pref_collis_people);
         }
         else if(dining_hall.equals("Hop")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.hop_graph));
+            wait_view.setText(R.string.pref_hop_wait);
+            people_view.setText(R.string.pref_hop_people);
         }
         if(dining_hall.equals("Kaf")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.kaf_graph));
+            wait_view.setText(R.string.pref_kaf_wait);
+            people_view.setText(R.string.pref_kaf_people);
         }
         if(dining_hall.equals("Novack")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.novack_graph));
+            wait_view.setText(R.string.pref_novack_wait);
+            people_view.setText(R.string.pref_novack_people);
         }
 
 

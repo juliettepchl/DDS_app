@@ -95,7 +95,6 @@ public class MenuActivity extends ListActivity {
             ArrayAdapter<String> myAdapter = new ArrayAdapter <String>(this, R.layout.row_layout, R.id.listText, filtered_menu);
             setListAdapter(myAdapter);
         }
-
     }
     // when an item of the list is clicked
     @Override
