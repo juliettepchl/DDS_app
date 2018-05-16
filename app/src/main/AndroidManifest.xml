@@ -46,9 +46,13 @@
             android:label="@string/title_activity_settings" />
         <activity android:name=".MenuActivity" />
         <activity
-            android:name=".ScrollingActivity"
+            android:name=".SpecialsActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FoodInfoActivity"
+            android:label="@string/title_activity_food_info"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

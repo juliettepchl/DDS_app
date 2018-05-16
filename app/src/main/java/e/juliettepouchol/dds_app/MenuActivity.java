@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,12 +12,10 @@ import java.util.Map;
 
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MenuActivity extends ListActivity {
 
@@ -57,7 +54,7 @@ public class MenuActivity extends ListActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ScrollingActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SpecialsActivity.class);
                 startActivity(intent);
                 //String selectedItem = (String) getListAdapter().getItem(position);
             }
@@ -99,15 +96,12 @@ public class MenuActivity extends ListActivity {
             setListAdapter(myAdapter);
         }
 
-
-        // assign the list adapter
-
-
     }
     // when an item of the list is clicked
     @Override
     protected void onListItemClick(ListView list, View view, int position, long id) {
-
+        Intent intent = new Intent(getApplicationContext(), FoodInfoActivity.class);
+        startActivity(intent);
 
     }
 
