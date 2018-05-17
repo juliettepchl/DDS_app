@@ -14,6 +14,7 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -100,6 +101,8 @@ public class MenuActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView list, View view, int position, long id) {
         Intent intent = new Intent(getApplicationContext(), FoodInfoActivity.class);
+        String selectedFromList = (String) list.getItemAtPosition(position);
+        intent.putExtra("EXTRA_FOOD", selectedFromList);
         startActivity(intent);
 
     }

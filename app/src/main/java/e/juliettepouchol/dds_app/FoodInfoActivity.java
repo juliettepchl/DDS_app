@@ -6,7 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class FoodInfoActivity extends AppCompatActivity {
 
@@ -14,7 +16,7 @@ public class FoodInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_info);
-        ImageView nutrition_image = findViewById(R.id.food_info);
-        nutrition_image.setImageDrawable(getResources().getDrawable(R.drawable.billybob));
+        final String food_name = getIntent().getStringExtra("EXTRA_FOOD");
+        ((TextView)findViewById(R.id.title_of_food)).setText(food_name);
     }
 }
