@@ -1,68 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light">
+    android:background="@drawable/sky"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/people"
-        android:layout_width="150dp"
-        android:layout_height="89dp"
-        android:layout_alignBottom="@+id/wait"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_toLeftOf="@+id/wait"
-        android:layout_toStartOf="@+id/wait"
-        android:background="@color/colorAccent"
-        android:ems="10"
-        android:foregroundGravity="top|left|center_horizontal"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        android:text="People: 70/200"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-
-        android:textAlignment="center"
-        android:clickable="false"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="3dp" />
-
-    <EditText
-        android:id="@+id/wait"
-        android:layout_width="150dp"
-        android:layout_height="93dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:background="@color/colorPrimary"
-        android:ems="10"
-        android:foregroundGravity="top|right"
-        android:inputType="textPersonName"
-        android:text="Wait Time: 30 mins"
-        android:clickable="false"
-        android:textAlignment="center"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        tools:layout_editor_absoluteX="188dp"
-        tools:layout_editor_absoluteY="-2dp" />
-
-    <Button
-        android:id="@+id/menu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/people"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp"
-        android:text="See Menu" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/menu_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="143dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
-</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:clickable="false"
+            android:ems="10"
+            android:foregroundGravity="top|left|center_horizontal"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:singleLine="false"
+            android:text="People: 70/200"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/wait"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/people"
+            android:layout_toRightOf="@+id/people"
+            android:clickable="false"
+            android:ems="10"
+            android:foregroundGravity="top|right"
+            android:inputType="textPersonName"
+            android:paddingRight="10dp"
+            android:text="Wait Time: 30 mins"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/menu_icon" />
+
+</LinearLayout>

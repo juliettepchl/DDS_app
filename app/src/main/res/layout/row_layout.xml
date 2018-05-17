@@ -8,11 +8,12 @@
         android:id="@+id/listText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:backgroundTint="@android:color/white"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="cursive"
         android:padding="10dp"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
 </LinearLayout>
