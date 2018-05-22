@@ -24,7 +24,7 @@ import java.util.Date;
 
 public class CampusMapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     private GoogleMap mMap;
-    private LatLng dartmouthCampus = new LatLng(43.703359, -72.288558);
+    private LatLng dartmouthCampus = new LatLng(43.703748313891886, -72.28884890179347);
     private LatLng Collis = new LatLng(43.702668, -72.289846);
     private LatLng Hop = new LatLng(43.701827, -72.288270);
     private LatLng Kaf = new LatLng(43.705151,-72.288507 );
@@ -69,7 +69,7 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
         googleMap.setOnMarkerClickListener(this);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dartmouthCampus));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dartmouthCampus, 16.0f));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dartmouthCampus, 17.0f));
 
 
         findViewById(R.id.preferences).setOnClickListener(new View.OnClickListener() {
