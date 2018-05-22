@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextSwitcher;
+import android.widget.TextView;
 
 public class DiningHallMenu extends AppCompatActivity {
 
@@ -29,22 +31,26 @@ public class DiningHallMenu extends AppCompatActivity {
         EditText people_view = (EditText)findViewById(R.id.people);
 
         if(dining_hall.equals("Collis")) {
-            graph.setImageDrawable(getResources().getDrawable(R.drawable.collis_graph));
+            graph.setImageDrawable(getResources().getDrawable(R.drawable.collis_flow));
+            ((TextView)findViewById(R.id.title)).setText("COLLIS");
             wait_view.setText(R.string.pref_collis_wait);
             people_view.setText(R.string.pref_collis_people);
         }
         else if(dining_hall.equals("Hop")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.hop_graph));
             wait_view.setText(R.string.pref_hop_wait);
+            ((TextView)findViewById(R.id.title)).setText("HOP");
             people_view.setText(R.string.pref_hop_people);
         }
         if(dining_hall.equals("Kaf")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.kaf_graph));
+            ((TextView)findViewById(R.id.title)).setText("KAF");
             wait_view.setText(R.string.pref_kaf_wait);
             people_view.setText(R.string.pref_kaf_people);
         }
         if(dining_hall.equals("Novack")) {
             graph.setImageDrawable(getResources().getDrawable(R.drawable.novack_graph));
+            ((TextView)findViewById(R.id.title)).setText("NOVACK");
             wait_view.setText(R.string.pref_novack_wait);
             people_view.setText(R.string.pref_novack_people);
         }

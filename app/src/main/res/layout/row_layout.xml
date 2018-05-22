@@ -6,13 +6,14 @@
 
     <TextView
         android:id="@+id/listText"
+        style="@android:style/Widget.DeviceDefault.Light.TextView.SpinnerItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/transparent"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif"
         android:padding="10dp"
-        android:textColor="#000000"
+        android:textColor="#1B4810"
         android:textSize="24sp"
         android:textStyle="bold" />
 

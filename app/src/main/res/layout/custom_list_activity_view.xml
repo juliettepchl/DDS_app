@@ -3,38 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wood"
+    android:background="@android:color/white"
     tools:context=".MenuActivity">
 
     <TextView
         android:id="@+id/mainText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif"
         android:text="Menu"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="#1B4810"
         android:textSize="50sp"
         android:textStyle="bold" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/mainText"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:src="@android:drawable/btn_star_big_on"
-        app:backgroundTint="@android:color/transparent"
-        app:fabSize="normal" />
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_above="@+id/button"
         android:layout_below="@+id/mainText" />
 
     <TextView
@@ -46,5 +33,17 @@
         android:layout_below="@+id/mainText"
         android:text="There is no data"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#1B4810"
+        android:padding="10dp"
+        android:text="SPECIAL"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
 
 </RelativeLayout>

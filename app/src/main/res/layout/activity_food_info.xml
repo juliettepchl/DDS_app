@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="title of the food"
-            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textColor="#1B4810"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -29,10 +30,12 @@
             android:id="@+id/information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="monospace"
+            android:fontFamily="sans-serif"
 
             android:text="@string/large_text"
-            android:textColor="@color/colorAccent" />
+            android:textAlignment="viewStart"
+            android:textColor="#1B4810"
+            android:textSize="21sp" />
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

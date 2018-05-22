@@ -4,20 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sky"
-    android:gravity="center_vertical"
+    android:background="@android:color/white"
+    android:gravity="top"
     android:orientation="vertical">
 
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="54dp"
+        android:background="#1B4810"
+        android:text="COLLIS"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="60sp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingStart="10dp"
-        android:paddingTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="none"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingStart="2dp"
+        android:paddingTop="2dp"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
 
     <RelativeLayout
@@ -40,8 +58,9 @@
             android:singleLine="false"
             android:text="People: 70/200"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textColorLink="@color/colorPrimary" />
+            android:textColor="#1B4810"
+            android:textColorLink="@color/colorPrimary"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/wait"
@@ -57,7 +76,8 @@
             android:paddingRight="10dp"
             android:text="Wait Time: 30 mins"
             android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="#1B4810"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
