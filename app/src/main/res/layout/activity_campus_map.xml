@@ -31,33 +31,27 @@
         android:textColor="@android:color/black"
         android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/time"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@android:color/white"
-        android:clickable="false"
-        android:elevation="0dp"
-        android:focusable="true"
-        android:text="12:43  PM"
-        android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:layout_margin="5dp"
+        android:background="@android:color/white" />
+"
+        android:background="@android:color/white" />
 
     <Button
         android:id="@+id/preferences"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_alignBaseline="@+id/time"
-        android:layout_alignBottom="@+id/time"
+        android:layout_width="44dp"
+        android:layout_height="54dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_margin="10dp"
         android:background="@android:drawable/ic_menu_preferences"
-        android:backgroundTint="@color/common_google_signin_btn_text_dark_focused" />
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+        android:elevation="24dp"
+        tools:background="@android:drawable/ic_menu_preferences" />
 
 </RelativeLayout>
