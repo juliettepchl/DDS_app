@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -55,7 +56,6 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
                 }
                 builder.setTitle("Welcome to Ditching Dartmouth Struggles!")
                         .setMessage(R.string.help_content)
-                        .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
             }
         });
@@ -76,14 +76,23 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        BitmapDescriptor yellow_icon = BitmapDescriptorFactory.fromResource(R.drawable.yellow_circle);
+        BitmapDescriptor red_icon = BitmapDescriptorFactory.fromResource(R.drawable.red_circle);
+        BitmapDescriptor green_icon = BitmapDescriptorFactory.fromResource(R.drawable.green_circle);
+        BitmapDescriptor hop_marker = BitmapDescriptorFactory.fromResource(R.drawable.hop_circle);
         // Add markers at the different dining halls, change color, move camera
 
-        mMap.addMarker(new MarkerOptions().position(Collis).title("Collis"));
+        mMap.addMarker(new MarkerOptions().position(Collis).title("Collis")
+                .icon(yellow_icon));
+
         mMap.addMarker(new MarkerOptions().position(Hop).title("Hop")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-        mMap.addMarker(new MarkerOptions().position(Kaf).title("Kaf"));
+                .icon(hop_marker));
+
+        mMap.addMarker(new MarkerOptions().position(Kaf).title("Kaf")
+                .icon(red_icon));
+
         mMap.addMarker(new MarkerOptions().position(Novack).title("Novack")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                .icon(green_icon));
 
         googleMap.setOnMarkerClickListener(this);
 

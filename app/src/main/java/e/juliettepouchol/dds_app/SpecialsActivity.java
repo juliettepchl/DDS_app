@@ -18,6 +18,6 @@ public class SpecialsActivity extends AppCompatActivity {
 
 
         ImageView nutrition_image = findViewById(R.id.nutrition_image);
-        nutrition_image.setImageDrawable(getResources().getDrawable(R.drawable.nutrition));
+        nutrition_image.setImageDrawable(getResources().getDrawable(R.drawable.veggie_burger));
     }
 }

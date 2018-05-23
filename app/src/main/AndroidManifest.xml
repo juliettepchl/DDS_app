@@ -52,7 +52,10 @@
         <activity
             android:name=".FoodInfoActivity"
             android:label="@string/title_activity_food_info"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_tabbed"></activity>
     </application>
 
 </manifest>

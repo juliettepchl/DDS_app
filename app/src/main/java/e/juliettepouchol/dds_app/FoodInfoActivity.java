@@ -15,8 +15,13 @@ public class FoodInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_info);
+        setContentView(R.layout.activity_scrolling);
         final String food_name = getIntent().getStringExtra("EXTRA_FOOD");
-        ((TextView)findViewById(R.id.title_of_food)).setText(food_name);
+        if(food_name.equals("French Fries")){
+            ((ImageView)findViewById(R.id.nutrition_image)).setImageDrawable(getResources().getDrawable(R.drawable.french_fries));
+        }
+        else if(food_name.equals("Billy Bob")){
+            ((ImageView)findViewById(R.id.nutrition_image)).setImageDrawable(getResources().getDrawable(R.drawable.billy_bob));
+        }
     }
 }

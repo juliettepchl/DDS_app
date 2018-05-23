@@ -62,7 +62,7 @@
         android:layout_marginBottom="60dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/help_icon"
-        android:backgroundTint="@android:color/holo_red_dark"
+        android:backgroundTint="@android:color/black"
         tools:background="@android:drawable/ic_menu_help" />
 
 </RelativeLayout>

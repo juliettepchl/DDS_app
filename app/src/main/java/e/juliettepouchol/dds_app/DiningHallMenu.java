@@ -57,11 +57,14 @@ public class DiningHallMenu extends AppCompatActivity {
 
 
 
-        Button menu = findViewById(R.id.menu_button);
+        final Button menu = findViewById(R.id.menu_button);
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent menu_intent = new Intent(DiningHallMenu.this, MenuActivity.class);
+                /*Intent menu_intent = new Intent(DiningHallMenu.this, MenuActivity.class);
+                menu_intent.putExtra("EXTRA_DH", dining_hall);
+                startActivity(menu_intent);*/
+                Intent menu_intent = new Intent(DiningHallMenu.this, TabbedActivity.class);
                 menu_intent.putExtra("EXTRA_DH", dining_hall);
                 startActivity(menu_intent);
             }
