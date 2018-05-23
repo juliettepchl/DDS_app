@@ -7,12 +7,52 @@
     android:layout_height="match_parent"
     tools:context="e.juliettepouchol.dds_app.TabbedActivity">
 
+
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1B4810"
+        android:capitalize="characters"
+        android:fontFamily="sans-serif"
+        android:text="MENU"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/button"
-        android:layout_below="@+id/mainText" />
+        android:layout_above="@+id/navigation"
+        android:layout_below="@+id/mainText"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="70dp" />
+
+    <Button
+        android:id="@+id/help_button3"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/help_icon"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/preferences_button3"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/gear_icon"
+        app:layout_constraintBottom_toTopOf="@id/help_button3"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <android.support.design.widget.BottomNavigationView

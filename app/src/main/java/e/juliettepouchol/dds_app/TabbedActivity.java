@@ -1,15 +1,21 @@
 package e.juliettepouchol.dds_app;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -113,10 +119,51 @@ public class TabbedActivity extends ListActivity {
         }
     };
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed);
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) this.findViewById(R.id.navigation);
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
+        for (int i = 0; i < menuView.getChildCount(); i++) {
+            final View iconView = menuView.getChildAt(i).findViewById(android.support.design.R.id.icon);
+            final ViewGroup.LayoutParams layoutParams = iconView.getLayoutParams();
+            final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+            // set your height here
+            layoutParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24
+                    , displayMetrics);
+            // set your width here
+            layoutParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 42, displayMetrics);
+            iconView.setLayoutParams(layoutParams);
+        }
+
+        findViewById(R.id.help_button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(TabbedActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(TabbedActivity.this);
+                }
+                builder.setTitle("Welcome to Ditching Dartmouth Struggles!")
+                        .setMessage(R.string.help_content)
+                        .show();
+            }
+        });
+
+        findViewById(R.id.preferences_button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent settingsIntent = new Intent(TabbedActivity.this, SettingsActivity.class);
+                startActivity(settingsIntent);
+            }
+        });
+
         current_category = "entree";
 
         mTextMessage = (TextView) findViewById(R.id.message);
@@ -128,6 +175,27 @@ public class TabbedActivity extends ListActivity {
 
 
 
+        if(dining_hall.equals("Collis")) {
+            String [] list = getResources().getStringArray(R.array.collis_menu);
+            set_up_list(list);
+        }
+        else if(dining_hall.equals("Hop")) {
+            String [] list = getResources().getStringArray(R.array.hop_menu);
+            set_up_list(list);
+        }
+        if(dining_hall.equals("Kaf")) {
+            String [] list = getResources().getStringArray(R.array.kaf_menu);
+            set_up_list(list);
+        }
+        if(dining_hall.equals("Novack")) {
+            String [] list = getResources().getStringArray(R.array.novack_menu);
+            set_up_list(list);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         if(dining_hall.equals("Collis")) {
             String [] list = getResources().getStringArray(R.array.collis_menu);
             set_up_list(list);

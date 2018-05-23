@@ -18,4 +18,9 @@
         android:id="@+id/beverages"
         android:icon="@drawable/drinks_icon"
         android:title="Beverages" />
+
+    <item
+        android:id="@+id/special"
+        android:icon="@drawable/special_icon"
+        android:title="Special" />
 </menu>

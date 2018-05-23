@@ -1,6 +1,8 @@
 package e.juliettepouchol.dds_app;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +26,29 @@ public class DiningHallMenu extends AppCompatActivity {
         people.setClickable(false);
         wait.setEnabled(false);
         wait.setClickable(false);
+
+        findViewById(R.id.help_button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(DiningHallMenu.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(DiningHallMenu.this);
+                }
+                builder.setTitle("Welcome to Ditching Dartmouth Struggles!")
+                        .setMessage(R.string.help_content)
+                        .show();
+            }
+        });
+
+        findViewById(R.id.preferences_button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent settingsIntent = new Intent(DiningHallMenu.this, SettingsActivity.class);
+                startActivity(settingsIntent);
+            }
+        });
 
         final String dining_hall = getIntent().getStringExtra("EXTRA_DH");
         ImageView graph = findViewById(R.id.imageView);
