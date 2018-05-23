@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
     <item
         android:id="@+id/entrees"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/burger_icon"
         android:title="Entrées" />
     <item
         android:id="@+id/sides"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/side_icon"
         android:title="Sides" />
 
     <item
         android:id="@+id/deserts"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Desert" />
+        android:icon="@drawable/dessert_icon"
+        android:title="Dessert" />
 
     <item
         android:id="@+id/beverages"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/drinks_icon"
         android:title="Beverages" />
-
-
-
 </menu>

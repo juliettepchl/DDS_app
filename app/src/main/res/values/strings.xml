@@ -55,6 +55,8 @@
 
     <string name="title_activity_menu">Menu</string>
     <string-array name="collis_menu">
+
+
         <item>Chicken Stir Fry|entree|dairy free</item>
         <item>Pesto Pasta|entree|vegetarian,dairy free</item>
         <item>Rainbow Pasta|entree|vegetarian,dairy free</item>
@@ -72,6 +74,8 @@
     </string-array>
 
     <string-array name="hop_menu">
+
+
         <item>Chicken Tender Caso|entree|nut free</item>
         <item>Chicken Tender Bob|entree|nut free</item>
         <item>Billy Bob|entree|nut free</item>
@@ -154,7 +158,7 @@
     <string name="help_content">
         "Each circle represents a dining hall on campus"
         "\nRed means the hall is crowded (More than 70% Capacity)"
-        "\nYellow means the hall is busy (30–70% Capacity)"
+        "\Orange means the hall is busy (30–70% Capacity)"
         "\nGreen means the hall is emptier (Less than 30% Capacity)"
 
         "\n\nPress the Settings icon to:"

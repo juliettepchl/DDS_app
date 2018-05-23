@@ -76,23 +76,23 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        BitmapDescriptor yellow_icon = BitmapDescriptorFactory.fromResource(R.drawable.yellow_circle);
-        BitmapDescriptor red_icon = BitmapDescriptorFactory.fromResource(R.drawable.red_circle);
-        BitmapDescriptor green_icon = BitmapDescriptorFactory.fromResource(R.drawable.green_circle);
-        BitmapDescriptor hop_marker = BitmapDescriptorFactory.fromResource(R.drawable.hop_circle);
+        BitmapDescriptor hop_icon = BitmapDescriptorFactory.fromResource(R.drawable.hop_icon);
+        BitmapDescriptor collis_icon = BitmapDescriptorFactory.fromResource(R.drawable.collis_icon);
+        BitmapDescriptor kaf_icon = BitmapDescriptorFactory.fromResource(R.drawable.kaf_icon);
+        BitmapDescriptor novack_icon = BitmapDescriptorFactory.fromResource(R.drawable.novack_icon);
         // Add markers at the different dining halls, change color, move camera
 
         mMap.addMarker(new MarkerOptions().position(Collis).title("Collis")
-                .icon(yellow_icon));
+                .icon(collis_icon));
 
         mMap.addMarker(new MarkerOptions().position(Hop).title("Hop")
-                .icon(hop_marker));
+                .icon(hop_icon));
 
         mMap.addMarker(new MarkerOptions().position(Kaf).title("Kaf")
-                .icon(red_icon));
+                .icon(kaf_icon));
 
         mMap.addMarker(new MarkerOptions().position(Novack).title("Novack")
-                .icon(green_icon));
+                .icon(novack_icon));
 
         googleMap.setOnMarkerClickListener(this);
 
