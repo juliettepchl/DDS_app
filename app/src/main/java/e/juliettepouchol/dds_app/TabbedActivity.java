@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -39,6 +40,10 @@ public class TabbedActivity extends ListActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.entrees:
+                    ((ImageView)findViewById(R.id.nutrition_image2)).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.list_layout).setVisibility(View.VISIBLE);
+                    findViewById(R.id.help_button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.preferences_button3).setVisibility(View.VISIBLE);
                     current_category = "entree";
                     if(dining_hall.equals("Collis")) {
                         String [] list = getResources().getStringArray(R.array.collis_menu);
@@ -58,6 +63,10 @@ public class TabbedActivity extends ListActivity {
                     }
                     return true;
                 case R.id.beverages:
+                    ((ImageView)findViewById(R.id.nutrition_image2)).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.list_layout).setVisibility(View.VISIBLE);
+                    findViewById(R.id.help_button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.preferences_button3).setVisibility(View.VISIBLE);
                     current_category = "beverage";
                     if(dining_hall.equals("Collis")) {
                         String [] list = getResources().getStringArray(R.array.collis_menu);
@@ -77,6 +86,10 @@ public class TabbedActivity extends ListActivity {
                     }
                     return true;
                 case R.id.deserts:
+                    ((ImageView)findViewById(R.id.nutrition_image2)).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.list_layout).setVisibility(View.VISIBLE);
+                    findViewById(R.id.help_button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.preferences_button3).setVisibility(View.VISIBLE);
                     current_category = "desert";
                     if(dining_hall.equals("Collis")) {
                         String [] list = getResources().getStringArray(R.array.collis_menu);
@@ -97,6 +110,10 @@ public class TabbedActivity extends ListActivity {
                     return true;
                 case R.id.sides:
                     current_category = "side";
+                    ((ImageView)findViewById(R.id.nutrition_image2)).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.list_layout).setVisibility(View.VISIBLE);
+                    findViewById(R.id.help_button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.preferences_button3).setVisibility(View.VISIBLE);
                     if(dining_hall.equals("Collis")) {
                         String [] list = getResources().getStringArray(R.array.collis_menu);
                         set_up_list(list);
@@ -113,6 +130,14 @@ public class TabbedActivity extends ListActivity {
                         String [] list = getResources().getStringArray(R.array.novack_menu);
                         set_up_list(list);
                     }
+                    return true;
+                case R.id.special:
+                    ImageView image_view = ((ImageView)findViewById(R.id.nutrition_image2));
+                    image_view.setImageDrawable(getResources().getDrawable(R.drawable.veggie_burger));
+                    image_view.setVisibility(View.VISIBLE);
+                    findViewById(R.id.list_layout).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.help_button3).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.preferences_button3).setVisibility(View.INVISIBLE);
                     return true;
             }
             return false;

@@ -8,6 +8,23 @@
     tools:context="e.juliettepouchol.dds_app.TabbedActivity">
 
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation"
+        android:layout_below="@+id/mainText"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        tools:context="e.juliettepouchol.dds_app.SpecialsActivity"
+        tools:showIn="@layout/activity_scrolling">
+
+        <ImageView
+            android:id="@+id/nutrition_image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp" />
+
+    </android.support.v4.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/mainText"
@@ -24,6 +41,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/list_layout"
+        android:layout_height="match_parent">
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
@@ -32,6 +54,8 @@
         android:layout_below="@+id/mainText"
         android:layout_marginBottom="80dp"
         android:layout_marginTop="70dp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/help_button3"
