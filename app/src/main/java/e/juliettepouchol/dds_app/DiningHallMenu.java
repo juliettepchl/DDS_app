@@ -43,7 +43,7 @@ public class DiningHallMenu extends AppCompatActivity {
             people_view.setText(R.string.pref_hop_people);
         }
         if(dining_hall.equals("Kaf")) {
-            graph.setImageDrawable(getResources().getDrawable(R.drawable.kaf_graph));
+            graph.setImageDrawable(getResources().getDrawable(R.drawable.kaf_chart));
             ((TextView)findViewById(R.id.title)).setText("KAF");
             wait_view.setText(R.string.pref_kaf_wait);
             people_view.setText(R.string.pref_kaf_people);

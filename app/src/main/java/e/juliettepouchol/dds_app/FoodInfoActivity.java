@@ -23,5 +23,8 @@ public class FoodInfoActivity extends AppCompatActivity {
         else if(food_name.equals("Billy Bob")){
             ((ImageView)findViewById(R.id.nutrition_image)).setImageDrawable(getResources().getDrawable(R.drawable.billy_bob));
         }
+        else if(food_name.equals("New England Salad")){
+            ((ImageView)findViewById(R.id.nutrition_image)).setImageDrawable(getResources().getDrawable(R.drawable.new_england_salad));
+        }
     }
 }

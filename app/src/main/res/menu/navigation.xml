@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <item
+        android:id="@+id/entrees"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Entrées" />
     <item
         android:id="@+id/sides"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Sides" />
-
-    <item
-        android:id="@+id/grabgo"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Grab and Go" />
 
     <item
         android:id="@+id/deserts"
@@ -20,10 +20,7 @@
         android:id="@+id/beverages"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="Beverages" />
-    <item
-        android:id="@+id/entrees"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Entrées" />
+
 
 
 </menu>

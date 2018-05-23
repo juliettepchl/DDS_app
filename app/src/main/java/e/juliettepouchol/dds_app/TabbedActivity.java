@@ -70,25 +70,6 @@ public class TabbedActivity extends ListActivity {
                         set_up_list(list);
                     }
                     return true;
-                case R.id.grabgo:
-                    current_category = "grab";
-                    if(dining_hall.equals("Collis")) {
-                        String [] list = getResources().getStringArray(R.array.collis_menu);
-                        set_up_list(list);
-                    }
-                    else if(dining_hall.equals("Hop")) {
-                        String [] list = getResources().getStringArray(R.array.hop_menu);
-                        set_up_list(list);
-                    }
-                    if(dining_hall.equals("Kaf")) {
-                        String [] list = getResources().getStringArray(R.array.kaf_menu);
-                        set_up_list(list);
-                    }
-                    if(dining_hall.equals("Novack")) {
-                        String [] list = getResources().getStringArray(R.array.novack_menu);
-                        set_up_list(list);
-                    }
-                    return true;
                 case R.id.deserts:
                     current_category = "desert";
                     if(dining_hall.equals("Collis")) {
@@ -136,7 +117,7 @@ public class TabbedActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed);
-        current_category = "side";
+        current_category = "entree";
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

@@ -76,6 +76,9 @@
         <item>Chicken Tender Bob|entree|nut free</item>
         <item>Billy Bob|entree|nut free</item>
         <item>The Hulk|entree|nut free</item>
+        <item>Chocolate Pudding|desert|nut free, vegetarian</item>
+        <item>Vanilla Pudding|desert|nut free, vegetarian</item>
+        <item>Lindt Chocolate|desert|nut free, vegetarian</item>
         <item>French Fries|side|vegan,vegetarian,dairy free,nut free</item>
         <item>Mozzarella Sticks|side|vegetarian,nut free</item>
         <item>Soda|beverage|vegan,vegetarian,dairy free,gluten free,nut free</item>
@@ -91,13 +94,16 @@
         <item>Vegan Cornbread Muffin|desert|vegan,vegetarian,dairy free</item>
         <item>French Toast Muffin|desert|vegetarian</item>
         <item>Sausage Egg and Cheese|entree|nut free</item>
-        <item>Apples and Bananas|grab|vegan,vegetarian,dairy free,nut free</item>
-        <item>Rasberry Yogurt|grab|vegetarian,nut free</item>
+        <item>Apples and Bananas|side|vegan,vegetarian,dairy free,nut free</item>
+        <item>Rasberry Yogurt|desert|vegetarian,nut free</item>
         <item>Odwalla|beverage|vegetarian,nut free</item>
+        <item>Water|beverage|vegetarian,nut free,gluten free,vegan,dairy free</item>
 
     </string-array>
     <string-array name="kaf_menu">
         <item>Rainbow Ravioli|entree|vegetarian,nut free</item>
+        <item>Artichoke Spread|side|vegetarian,nut free,dairy free,gluten free, vegan</item>
+        <item>Hollapeno Spread|side|vegetarian,nut free,dairy free,gluten free, vegan</item>
         <item>New England Salad|entree|vegetarian</item>
         <item>Cesar Salad|entree|vegetarian,nut free</item>
         <item>Iced Soy Latte|beverage|vegetarian,nut free,gluten free,vegan,dairy free</item>
