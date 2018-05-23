@@ -1,6 +1,10 @@
 package e.juliettepouchol.dds_app;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
 
 import android.os.Bundle;
@@ -28,7 +32,6 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
     private LatLng Collis = new LatLng(43.702668, -72.289846);
     private LatLng Hop = new LatLng(43.701827, -72.288270);
     private LatLng Kaf = new LatLng(43.705151,-72.288507 );
-    private LatLng FOCO = new LatLng(43.703036, -72.290836);
     private LatLng Novack = new LatLng(43.705837, -72.289323);
 
     @Override
@@ -40,6 +43,22 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        findViewById(R.id.help_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(CampusMapActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(CampusMapActivity.this);
+                }
+                builder.setTitle("Welcome to Ditching Dartmouth Struggles!")
+                        .setMessage(R.string.help_content)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
 
     }
 

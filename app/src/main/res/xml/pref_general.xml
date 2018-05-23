@@ -12,6 +12,8 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_title_display_plan" />
+
+
     <EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_default_swipes"
@@ -21,8 +23,6 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_title_display_swipes" />
-
-
     <EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_default_dba"

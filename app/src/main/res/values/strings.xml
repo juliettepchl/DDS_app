@@ -76,7 +76,7 @@
         <item>Chicken Tender Bob|nut free</item>
         <item>Billy Bob|nut free</item>
         <item>The Hulk|nut free</item>
-        <item>Fries|vegan,vegetarian,dairy free,nut free</item>
+        <item>French Fries|vegan,vegetarian,dairy free,nut free</item>
         <item>Mozzarella Sticks|vegetarian,nut free</item>
         <item>Soda|vegan,vegetarian,dairy free,gluten free,nut free</item>
         <item>Onion Rings|vegan,vegetarian,dairy free,nut free</item>
@@ -143,4 +143,21 @@
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="title_activity_scrolling2">ScrollingActivity2</string>
     <string name="title_activity_food_info">FoodInfoActivity</string>
+
+
+    <string name="help_content">
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+        "This is our help content! \n"
+    </string>
+
 </resources>

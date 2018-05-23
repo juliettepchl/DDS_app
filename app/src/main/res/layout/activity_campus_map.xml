@@ -1,3 +1,12 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/myCoordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -31,27 +40,30 @@
         android:textColor="@android:color/black"
         android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:background="@android:color/white" />
-"
-        android:background="@android:color/white" />
-
     <Button
         android:id="@+id/preferences"
-        android:layout_width="44dp"
-        android:layout_height="54dp"
-        android:layout_alignParentEnd="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:background="@android:drawable/ic_menu_preferences"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/gear_icon"
         android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
         android:elevation="24dp"
         tools:background="@android:drawable/ic_menu_preferences" />
 
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/help_icon"
+        android:backgroundTint="@android:color/holo_red_dark"
+        tools:background="@android:drawable/ic_menu_help" />
+
 </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
